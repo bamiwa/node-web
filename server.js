@@ -14,6 +14,12 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello World!</h1>');
 });
 
+app.get('/projects', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Projects'
+  });
+});
+
 app.get('/about', (req, res) => {
   //res.send('<p>about page</p>');
   res.render('about.hbs', {
